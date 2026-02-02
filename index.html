@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МамаПомощник</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="night-theme">
+  <div class="container">
+    <h1>МамаПомощник</h1>
+
+    <!-- Вес ребёнка -->
+    <section class="weight">
+      <h2>Вес ребёнка</h2>
+      <input type="number" id="weightInput" placeholder="Вес (кг)">
+      <button onclick="addWeight()">Добавить</button>
+      <ul id="weightList"></ul>
+    </section>
+
+    <!-- Таймер кормлений -->
+    <section class="feeding">
+      <h2>Кормление</h2>
+      <div class="timer-controls">
+        <button onclick="startFeedingTimer()">Начать</button>
+        <button onclick="stopFeedingTimer()" class="stop-btn">Стоп</button>
+      </div>
+      <div id="timerDisplay">00:00</div>
+    </section>
+
+    <!-- Ночной режим -->
+    <section class="nightMode">
+      <h2>Ночной режим</h2>
+      <label>
+        Интервал (сек):
+        <input type="number" id="intervalInput" value="30" min="10" max="180">
+      </label>
+      <div class="toggle-container">
+        <button onclick="toggleNightMode()" id="nightToggle">Включить</button>
+        <div id="nightStatus"></div>
+      </div>
+    </section>
+
+    <!-- Тест звука -->
+    <button onclick="testSound()" class="test-btn">Проверить звук</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
